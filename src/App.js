@@ -121,7 +121,7 @@ function Posts() {
   const { posts } = useContext(PostContext);
   return (
     <section>
-      <List posts={posts} />
+      <List />
     </section>
   );
 }
@@ -158,6 +158,8 @@ function FormAddPost() {
 }
 
 function List({ posts }) {
+  const { posts } = useContext(PostContext);
+
   return (
     <ul>
       {posts.map((post, i) => (
